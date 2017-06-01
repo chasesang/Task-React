@@ -14,17 +14,13 @@ class App extends Component {
     this.goToUserIndex = this.goToUserIndex.bind(this);
   }
 
-  goToUserIndex(event) {
-    event.preventDefault();
-
+  goToUserIndex(userId) {
     this.setState({
       to: "userIndex"
     });
   }
 
-  goToUserNew(event) {
-    event.preventDefault();
-
+  goToUserNew() {
     this.setState({
       to: "userNew"
     });
@@ -44,11 +40,21 @@ class App extends Component {
       <div className="App">
         <h1>Users Entry</h1>
         <nav>
-          <a href onClick={event => this.goToUserNew(event)}>
+          <a href onClick={
+            e => {
+              e.preventDefault();
+              this.goToUserNew();
+            }
+          }>
             New User
           </a>
           <span> | </span>
-          <a href onClick={event => this.goToUserIndex(event)}>
+          <a href onClick={
+            e => {
+              e.preventDefault();
+              this.goToUserIndex();
+            }
+          }>
             All Users
           </a>
         </nav>

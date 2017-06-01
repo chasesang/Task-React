@@ -19,7 +19,7 @@ class UserNew extends React.Component {
         last_name: fData.get("last_name"),
         DOB: fData.get("DOB")
       }
-    ).then(() => this.props.onBack(event));
+    ).then(() => this.props.onBack());
   }
 
   render() {
