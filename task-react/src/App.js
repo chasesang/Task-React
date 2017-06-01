@@ -1,71 +1,58 @@
-import React, { Component } from 'react';
-import UsersIndex from './components/UsersIndex';
-import UserNew from './components/UserNew';
-
-import './App.css';
-
+import React, { Component } from "react";
+import UsersIndex from "./components/UsersIndex";
+import UserNew from "./components/UserNew";
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      to: 'userIndex'
+      to: "userIndex"
     };
-
 
     this.goToUserIndex = this.goToUserIndex.bind(this);
   }
 
+  goToUserIndex(event) {
+    event.preventDefault();
 
-  goToUserIndex () {
     this.setState({
-      to: `userIndex`
-    })
+      to: "userIndex"
+    });
   }
 
-  goToUserNew () {
+  goToUserNew(event) {
+    event.preventDefault();
+
     this.setState({
-      to: `userNew`
-    })
+      to: "userNew"
+    });
   }
 
-  _renderPath () {
-      const [path] = this.state.to.split('#');
-      return ({
-        userIndex: (
-          <UsersIndex
-            onUserClick={this.goToUser} />
-        ),
-        userNew: (
-          <UserNew
-            onBack={this.goToUserIndex} />
-        )
-      })[path];
-    }
+  renderPath() {
+    const path = this.state.to;
 
-
-
+    return {
+      userIndex: <UsersIndex onUserClick={this.goToUser} />,
+      userNew: <UserNew onBack={this.goToUserIndex} />
+    }[path];
+  }
 
   render() {
     return (
       <div className="App">
         <h1>Users Entry</h1>
         <nav>
-          <a
-            href
-            onClick={e => {
-              e.preventDefault();
-              this.goToUserNew();
-            }}>New User</a> |
-          <a
-            href
-            onClick={e => {
-              e.preventDefault();
-              this.goToUserIndex();
-            }}>All Users</a>
+          <a href onClick={event => this.goToUserNew(event)}>
+            New User
+          </a>
+          <span> | </span>
+          <a href onClick={event => this.goToUserIndex(event)}>
+            All Users
+          </a>
         </nav>
-        {this._renderPath()}
+        {this.renderPath()}
       </div>
     );
   }
