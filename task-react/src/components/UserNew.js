@@ -1,6 +1,7 @@
 import React from "react";
 import { addUser } from "../utilities/requests";
 
+
 class UserNew extends React.Component {
   constructor(props) {
     super(props);
@@ -24,29 +25,31 @@ class UserNew extends React.Component {
 
   render() {
     return (
-      <div className="UserNew">
-        <h2>New User</h2>
-        <form onSubmit={this.handleSubmit}>
-
-          <div className="form-group">
-            <label htmlFor="first_name">First Name</label>
-            <input id="first_name" name="first_name" />
-          </div>
+      <div className="container">
+        <div className="UserNew">
+          <h2>New User</h2>
+          <form onSubmit={this.handleSubmit}>
 
             <div className="form-group">
-            <label htmlFor="last_name">Last Name</label>
-            <input id="last_name" name="last_name" />
-          </div>
+              <label htmlFor="first_name">First Name: </label>
+              <input  className="form-control nameinput" id="first_name" name="first_name" />
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="DOB">DOB</label>
-            <input type="date"id="DOB" name="DOB" />
-          </div>
+              <div className="form-group">
+              <label htmlFor="last_name">Last Name: </label>
+              <input className="form-control nameinput" id="last_name" name="last_name" />
+            </div>
 
-          <div>
-            <input type="submit" value="Submit" />
-          </div>
-        </form>
+            <div className="form-group">
+              <label htmlFor="DOB">DOB</label>
+              <input className="form-control dateinput" type="date"id="DOB" name="DOB" />
+            </div>
+
+            <div>
+              <input className="btn btn-info" type="submit" value="Submit" />
+            </div>
+          </form>
+        </div>
       </div>
     );
   }

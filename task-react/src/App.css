@@ -18,6 +18,18 @@
   font-size: large;
 }
 
+.nameinput {
+  justifyContent: center;
+  display: inline-block;
+  width: 30%;
+}
+
+.dateinput {
+  justifyContent: center;
+  display: inline-block;
+  width: 30%;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

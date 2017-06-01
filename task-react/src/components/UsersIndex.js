@@ -38,7 +38,7 @@ class UsersIndex extends React.Component {
             <div className="UsersIndex">
                 <h2>Users</h2>
                 <input type="text" placeholder="Search" value={this.state.search} onChange={this.updateSearch.bind(this)}/>
-                <table className="table">
+                <table className="table table-striped">
                     <thead className="thead-inverse">
                         <tr>
                             <th className="text-center">ID</th>
