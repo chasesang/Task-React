@@ -13,7 +13,7 @@ function UserSummary (props) {
     <div
       style={{marginBottom: '10px'}}
       className="UserSummary">
-      <a onClick={handleClick} href>{props.title}</a>
+      <a onClick={handleClick} href>{props.first_name}</a>
     </div>
   );
 }
