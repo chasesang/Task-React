@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import UsersIndex from './components/UsersIndex';
 import UserNew from './components/UserNew';
-import logo from './logo.svg';
+
 import './App.css';
 
 class App extends Component {
@@ -30,7 +30,7 @@ class App extends Component {
   }
 
   _renderPath () {
-      const [path, id] = this.state.to.split('#');
+      const [path] = this.state.to.split('#');
       return ({
         userIndex: (
           <UsersIndex

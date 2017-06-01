@@ -11,7 +11,6 @@ function UserSummary (props) {
 
   return (
     <div
-      style={{marginBottom: '10px'}}
       className="UserSummary">
       <a onClick={handleClick} href>{props.first_name}</a>
     </div>

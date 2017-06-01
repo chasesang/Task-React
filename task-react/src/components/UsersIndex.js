@@ -22,7 +22,7 @@ class UsersIndex extends React.Component {
 
   _renderUsers() {
     return this.state.users.map((user) => {
-  
+
       return <UserSummary onClick={this.props.onUserClick} key={user.id} {...user} />
     });
   }
@@ -32,7 +32,9 @@ class UsersIndex extends React.Component {
       <div className="UsersIndex">
         <h2>Users</h2>
         { this._renderUsers() }
+        <input type="text" />
       </div>
+
     );
   }
 };
