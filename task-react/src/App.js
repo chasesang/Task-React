@@ -12,7 +12,7 @@ class App extends Component {
       to: 'userIndex'
     };
 
-    this.goToUser = this.goToUser.bind(this);
+
     this.goToUserIndex = this.goToUserIndex.bind(this);
   }
 
