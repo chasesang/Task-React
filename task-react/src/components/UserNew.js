@@ -31,17 +31,17 @@ class UserNew extends React.Component {
           <form onSubmit={this.handleSubmit}>
 
             <div className="form-group">
-              <label htmlFor="first_name">First Name: </label>
+              <label htmlFor="first_name">First Name: </label><br></br>
               <input  className="form-control nameinput" id="first_name" name="first_name" />
             </div>
 
               <div className="form-group">
-              <label htmlFor="last_name">Last Name: </label>
+              <label htmlFor="last_name">Last Name: </label><br></br>
               <input className="form-control nameinput" id="last_name" name="last_name" />
             </div>
 
             <div className="form-group">
-              <label htmlFor="DOB">DOB</label>
+              <label htmlFor="DOB">DOB: </label><br></br>
               <input className="form-control dateinput" type="date"id="DOB" name="DOB" />
             </div>
 
