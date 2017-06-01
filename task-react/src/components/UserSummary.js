@@ -8,19 +8,20 @@ function UserSummary(props) {
       props.onClick(props.id);
     }
   };
-
+  
   return (
-
-              <tbody>
-                <tr>
-                  <td>{props.id}</td>
-                  <td><a onClick={handleClick} href>{props.first_name}</a></td>
-                  <td><a onClick={handleClick} href>{props.last_name}</a></td>
-                  <td>{props.DOB}</td>
-                </tr>
-              </tbody>
-
-
+    <tbody>
+      <tr>
+        <td>{props.id}</td>
+        <td>
+          <a onClick={handleClick} href>{props.first_name}</a>
+        </td>
+        <td>
+          <a onClick={handleClick} href>{props.last_name}</a>
+        </td>
+        <td>{props.DOB}</td>
+      </tr>
+    </tbody>
   );
 }
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { addUser } from "../utilities/requests";
 
-
 class UserNew extends React.Component {
   constructor(props) {
     super(props);
@@ -29,6 +28,7 @@ class UserNew extends React.Component {
         <div className="UserNew">
           <h2>New User</h2>
           <form onSubmit={this.handleSubmit}>
+
             <div className="form-group">
               <label htmlFor="first_name">First Name: </label><br></br>
               <input  className="form-control nameinput" id="first_name" name="first_name" />
@@ -54,4 +54,4 @@ class UserNew extends React.Component {
   }
 }
 
-export default UserNew;
+export default UserEdit;
