@@ -10,10 +10,17 @@ function UserSummary(props) {
   };
 
   return (
-    <div className="UserSummary">
-      <a onClick={handleClick} href>{props.first_name} {props.last_name}</a>
-      {props.DOB}
-    </div>
+
+              <tbody>
+                <tr>
+                  <td>{props.id}</td>
+                  <td><a onClick={handleClick} href>{props.first_name}</a></td>
+                  <td><a onClick={handleClick} href>{props.last_name}</a></td>
+                  <td>{props.DOB}</td>
+                </tr>
+              </tbody>
+
+
   );
 }
 
