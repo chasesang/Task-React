@@ -7,7 +7,8 @@ class UsersIndex extends React.Component {
     super(props);
 
     this.state = {
-      users: []
+      users: [],
+      search: ''
     }
   }
 
@@ -27,12 +28,23 @@ class UsersIndex extends React.Component {
     });
   }
 
+  updateSearch(event) {
+    this.setState({search: event.target.value});
+  }
+
   render() {
+    // let filteredUsers = this.props.users.filter(
+    //   (user) => {
+    //     return user.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+    //   }
+    // )
+
     return (
       <div className="UsersIndex">
         <h2>Users</h2>
         { this._renderUsers() }
-        <input type="text" />
+        <input type="text" value={this.state.search}
+        onChange={this.updateSearch.bind(this)}/>
       </div>
 
     );
